@@ -2,13 +2,14 @@
 
 <div class="row">
     <div class="col">
-        <form action="">
+        <form (ngSubmit)="guardar()" #miFormulario="ngForm" autocomplete="false">
             <!-- campo de producto  -->
             <div class="row mt-2">
                 <label for="" class="col-sm-3 col-form-label">Producto:</label>
                 <div class="col-sm-9">
                     <input type="text"
-                    class="form-control" placeholder="Ingrese Producto">
+                    class="form-control" placeholder="Ingrese Producto" name="producto"
+                    [(ngModel)]="producto">
                     <span>Debe ser de 3 letras</span>
                 </div>
             </div>
@@ -16,7 +17,7 @@
             <div class="row mt-2">
                 <label for="" class="col-sm-3 col-form-label">Precio :</label>
                 <div class="col-sm-9">
-                    <input type="number"
+                    <input type="number" name="precio" [(ngModel)]="precio"
                     class="form-control" placeholder="Ingrese precio">
                   
                 </div>
@@ -25,7 +26,7 @@
             <div class="row mt-2">
                 <label for="" class="col-sm-3 col-form-label">Existencia del Pro :</label>
                 <div class="col-sm-9">
-                    <input type="number"
+                    <input type="number" name="existencia" [(ngModel)]="existencia"
                     class="form-control" placeholder="existencia">
                   
                 </div>

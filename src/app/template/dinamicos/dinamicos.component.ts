@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dinamicos.component.css']
 })
 export class DinamicosComponent implements OnInit {
-
+  nombre: string = '';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  guardar() {
+    console.log('peo');
   }
 
 }
